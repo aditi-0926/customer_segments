@@ -1,32 +1,46 @@
 # Customer Segmentation with K-Means
 
-Python script that segments customers from the iFood dataset using K-Means clustering.
-
 ## Overview
+This project uses K-Means clustering to segment customers based on income, spending behavior, purchase activity, and recency. It combines data cleaning, feature engineering, exploratory data analysis, and unsupervised machine learning to identify customer groups for data-driven marketing strategies.
 
-Performs exploratory analysis, feature engineering, and unsupervised clustering on customer data to identify distinct segments based on income, spending, purchases, and recency.
+## Tech Stack
+- **Language:** Python
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+- **Algorithm:** K-Means Clustering
+- **Environment:** Google Colab / Jupyter Notebook
 
-## Features Used
+## Project Workflow
+- **Data Cleaning:** Inspected missing values, analyzed data, and removed duplicates.
+- **Feature Engineering:** Created `Total_Spending` and `Total_Purchases`.
+- **EDA:** Visualized income, spending, purchases, and feature correlations.
+- **Feature Scaling:** Standardized selected features using `StandardScaler`.
+- **Clustering:** Used the Elbow Method and applied K-Means with four clusters.
+- **Cluster Analysis:** Visualized customer segments and compared their average income, spending, purchases, and recency.
 
-- **Income**
-- **Total_Spending** (sum of wines, fruits, meat, fish, sweets, gold products)
-- **Total_Purchases** (web + catalog + store purchases)
-- **Recency**
+## Dataset
+Uses the iFood customer dataset (`ifood_df.csv`). Place the dataset in the project directory before running the script.
 
-## Pipeline
+## Installation and Execution
 
-1. **Data Loading & Cleaning** – Load `ifood_df.csv`, remove duplicates
-2. **Feature Engineering** – Create Total_Spending and Total_Purchases
-3. **EDA** – Income, spending, and purchase distributions; correlation heatmap; income vs spending scatter
-4. **Scaling** – StandardScaler on selected features
-5. **Elbow Method** – Determine optimal number of clusters (K=4)
-6. **K-Means Clustering** – Assign customers to 4 segments
-7. **Visualization & Analysis** – Cluster scatter plots and mean profile summary
-
-## Requirements
+Install the required libraries:
 
 ```bash
-pandas
-matplotlib
-seaborn
-scikit-learn
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Run the script:
+
+```bash
+python customer_segmentation.py
+```
+
+## Future Enhancements
+- Evaluate clusters using Silhouette Score.
+- Build an interactive dashboard using Power BI or Streamlit.
+- Develop targeted marketing strategies for each customer segment.
+
+
+## Author
+**Aditi Bhagat**
+
+GitHub: [aditi-0926](https://github.com/aditi-0926)
